@@ -1,0 +1,143 @@
+
+POST http://localhost:5000/client/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+    "first_name": "Nicolas",
+    "last_name": "Blandon",
+    "dni": "10002221",
+    "email": "nb@mail.com",
+    "celphone": 123123,
+    "gender":"male",
+    "birth_date":"1999-12-21",
+    "password":"Cositos2112",
+    "id_rol":1
+}
+
+POST http://localhost:5000/client/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+    "first_name": "Juan",
+    "last_name": "Blandon",
+    "dni": "1020777212",
+    "email": "juan@mail.com",
+    "celphone": 123123112,
+    "gender":"male",
+    "birth_date":"1999-12-21",
+    "password":"Cositos2112",
+    "id_rol":2
+}
+
+
+POST http://localhost:5000/login/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+    "email": "nb@mail.com",
+    "password": "Cositos2112"
+}
+
+
+POST http://localhost:5000/login/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+    "email": "`OR 1=1/*",
+    "password": "*/--"
+}
+
+
+
+GET http://localhost:5000/whoami/
+
+
+
+GET http://localhost:5000/assessment/1/
+
+
+
+
+GET http://localhost:5000/volumetry/1/
+
+
+POST http://localhost:5000/assessment/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+    "id_clients":2,
+    "assessment_date":"1999-12-21",
+    "height_cm": 182,
+    "height_mts": 1.82,
+    "weight": 81,
+    "humerus_diameter": 6.3,
+    "femur_diameter": 7.2
+}
+
+
+POST http://localhost:5000/skinfold/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+        "id_clients":2,
+        "sf_tricipital":7.2,
+        "sf_subscapular":14,
+        "sf_suprailiac":15,
+        "sf_abdominal":14,
+        "sf_thigh":10,
+        "sf_leg":7
+}
+
+POST http://localhost:5000/skinfold/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+        "id_clients":2,
+        "sf_tricipital":7,
+        "sf_subscapular":12,
+        "sf_suprailiac":10,
+        "sf_abdominal":11,
+        "sf_thigh":6,
+        "sf_leg":2
+}
+
+
+
+
+GET http://localhost:5000/volumetry/2/
+
+GET http://localhost:5000/client/1/
+
+GET http://localhost:5000/clients/
+
+GET http://localhost:5000/skinfold/2/
+
+PATCH http://localhost:5000/skinfold/update/2/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+        "id_clients":2,
+        "sf_tricipital":7,
+        "sf_subscapular":12,
+        "sf_suprailiac":10,
+        "sf_abdominal":11,
+        "sf_thigh":6,
+        "sf_leg":2
+}
+
+
+
+POST http://localhost:5000/volumetry/add/
+Content-type: application/x-www-form-urlencoded
+Content-type: application/json
+{
+           "id_clients": 2,
+           "v_neck": 40.5,
+           "v_shoulder": 50.2,
+           "v_torax": 90.3,
+           "v_abdomen": 85.4,
+           "v_bitrochanteric": 95.6,
+           "v_thig": 60.2,
+           "v_leg": 50.1,
+           "v_biceps": 30.5
+}
