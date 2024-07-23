@@ -1,3 +1,4 @@
+###
 
 POST http://localhost:5000/client/add/
 Content-type: application/x-www-form-urlencoded
@@ -14,9 +15,11 @@ Content-type: application/json
     "id_rol":1
 }
 
+###
+
 POST http://localhost:5000/client/add/
-Content-type: application/x-www-form-urlencoded
-Content-type: application/json
+content-type: application/x-www-form-urlencoded
+content-type: application/json
 {
     "first_name": "Juan",
     "last_name": "Blandon",
@@ -29,37 +32,40 @@ Content-type: application/json
     "id_rol":2
 }
 
+###
 
 POST http://localhost:5000/login/
-Content-type: application/x-www-form-urlencoded
-Content-type: application/json
-{
-    "email": "nb@mail.com",
+accept: application/json
+content-type: application/json
+
+{   "email": "juan@mail.com",
     "password": "Cositos2112"
 }
 
+###
 
 POST http://localhost:5000/login/
-Content-type: application/x-www-form-urlencoded
-Content-type: application/json
+accept: application/json
+content-type: application/json
+
 {
     "email": "`OR 1=1/*",
     "password": "*/--"
 }
 
-
+###
 
 GET http://localhost:5000/whoami/
 
-
+###
 
 GET http://localhost:5000/assessment/1/
 
-
-
+###
 
 GET http://localhost:5000/volumetry/1/
 
+###
 
 POST http://localhost:5000/assessment/add/
 Content-type: application/x-www-form-urlencoded
@@ -74,6 +80,7 @@ Content-type: application/json
     "femur_diameter": 7.2
 }
 
+###
 
 POST http://localhost:5000/skinfold/add/
 Content-type: application/x-www-form-urlencoded
@@ -88,6 +95,8 @@ Content-type: application/json
         "sf_leg":7
 }
 
+###
+
 POST http://localhost:5000/skinfold/add/
 Content-type: application/x-www-form-urlencoded
 Content-type: application/json
@@ -101,16 +110,26 @@ Content-type: application/json
         "sf_leg":2
 }
 
-
-
+###
 
 GET http://localhost:5000/volumetry/2/
+accept: application/json
+
+###
 
 GET http://localhost:5000/client/1/
+accept: application/json
+
+###
 
 GET http://localhost:5000/clients/
+accept: application/json
+
+###
 
 GET http://localhost:5000/skinfold/2/
+
+###
 
 PATCH http://localhost:5000/skinfold/update/2/
 Content-type: application/x-www-form-urlencoded
@@ -125,7 +144,7 @@ Content-type: application/json
         "sf_leg":2
 }
 
-
+###
 
 POST http://localhost:5000/volumetry/add/
 Content-type: application/x-www-form-urlencoded
